@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('skymind@feature/enable-tests')
+@Library('skymind@feature/enable-tests') _
 
 /*
     To redefine some job/run parameters,
