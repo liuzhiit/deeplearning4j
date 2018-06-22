@@ -38,5 +38,19 @@
         <profile>
             <id>test-nd4j-cuda-9.0</id>
         </profile>
+        <!-- Skip this module when "ci-test" module is enabled. Note that this is TEMPORARY until CI is running all tests -->
+        <profile>
+            <id>ci-test</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 </project>
